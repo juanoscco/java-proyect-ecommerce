@@ -15,6 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
 
 public class GenerarReportes extends JDialog implements ActionListener {
@@ -99,6 +100,9 @@ public class GenerarReportes extends JDialog implements ActionListener {
 		//Evento de filtrado
 		GenerarReporte();
 	}
+	
+	//Formato decimal
+	DecimalFormat df = new DecimalFormat("0.00");
 	
 	//Es el boton de procesar
 	void GenerarReporte() {
@@ -266,25 +270,25 @@ public class GenerarReportes extends JDialog implements ActionListener {
 		imprimir("");
 		//imprimir primera lavadora
 		imprimir("Modelo :" + Tienda.modelo0);
-		imprimir("Precio :" + Tienda.precio0 + mensaje0 );
+		imprimir("Precio :" + df.format(Tienda.precio0) + mensaje0 );
 		imprimir("");
 
 		//imprimir segunda lavadora
 		imprimir("Modelo :" + Tienda.modelo1);
-		imprimir("Precio :" + Tienda.precio1 + mensaje1 );
+		imprimir("Precio :" + df.format(Tienda.precio1) + mensaje1 );
 		imprimir("");
 
 		//imprimir tercera lavadora
 		imprimir("Modelo :" + Tienda.modelo2);
-		imprimir("Precio :" + Tienda.precio2 + mensaje2 );
+		imprimir("Precio :" + df.format(Tienda.precio2) + mensaje2 );
 		imprimir("");
 		//imprimir cuarta lavadora
 		imprimir("Modelo :" + Tienda.modelo3);
-		imprimir("Precio :" + Tienda.precio3 + mensaje3 );
+		imprimir("Precio :" + df.format(Tienda.precio3) + mensaje3 );
 		imprimir("");
 		//imprimir quinta lavadora
 		imprimir("Modelo :" + Tienda.modelo4);
-		imprimir("Precio :" + Tienda.precio4 + mensaje4 );
+		imprimir("Precio :" + df.format(Tienda.precio4) + mensaje4 );
 		imprimir("");
 		
 	}
